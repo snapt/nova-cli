@@ -17,6 +17,36 @@ The nova-cli helper provides easy access to our open API, and includes the follo
 
 ------
 
+## Installation
+
+Run the below to install nova-cli globally. You can then run "nova-cli" 
+```
+composer global require snapt/nova-cli
+```
+
+Save your API token from Nova like so:
+```
+echo "YOUR_API_TOKEN" > ~/.nova-api-key
+```
+
+## Usage
+
+You can run "nova-cli" for all the available commands, and view the requirements by adding "-h" as shown in the example below:
+```
+❯ ./nova-cli waf:ruleset -h
+Description:
+  Interact with the rulesets in a WAF profile
+
+Usage:
+  waf:ruleset <profile_id> <action> [<list> [<ip>]]
+
+Arguments:
+  profile_id            the WAF profile ID
+  action                list|add|remove
+  list                  allowed|blocked for when adding or removing an IP to a list
+  ip                    the IP/cidr to add or remove if action is add|remove
+```
+
 ## Snapt Nova
 
 To sign up for a free Nova account go to [https://nova.snapt.net](https://nova.snapt.net)
